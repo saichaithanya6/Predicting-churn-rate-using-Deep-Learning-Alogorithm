@@ -8,5 +8,14 @@ balance the data, Created ANN algorithm to find the churn rate.
 The dataset is collected from kaggle. This step involves loading the dataset into the environment. The dataset likely contains information about customers, Monthly billing, services used, type of service and other features.
 
 ### Feature Engineering:
-Feature engineering in the project involves creating new features or modifying existing ones to improve the performance of machine learning models. This includes creating new variables from existing ones, handling missing 
-values, transforming variables to better represent the underlying relationships in the data.
+Feature engineering in the project involves creating new features or modifying existing ones to improve the performance of machine learning models. This includes creating new variables from existing ones, handling missing values, transforming variables to better represent the underlying relationships in the data.
+
+### Handling Missing Values: 
+Rows with missing values in the "TotalCharges" column are dropped, and the column is converted to numeric using pd.to_numeric.
+
+### Visualizations: 
+Histograms are plotted to visualize the distribution of "tenure" and "MonthlyCharges" for customers with churn labeled as 'Yes' and 'No'. These visualizations help in understanding the relationship between these variables and customer churn.
+
+### Handling Categorical Variables: 
+The categorical variables with values 'No internet service' and 'No phone service' are replaced with 'No'. Then, the categorical variables are encoded using one-hot encoding 
+to convert them into numerical format.
